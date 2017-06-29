@@ -210,7 +210,6 @@ module CanCan
                else
                  parent_resource.send(@options[:through_association] || name.to_s.pluralize)
                end
-        base = base.scoped if base.respond_to?(:scoped) && active_record_3?
         base
       elsif @options[:shallow]
         resource_class
